@@ -72,8 +72,8 @@ class Users extends CI_Controller {
 		$user['Pincode'] = $this->input->post('pincode');
 
 		$this->form_validation->set_rules('name', 'Name', array('required'));
-		$this->form_validation->set_rules('email', 'Email', array('required', 'regex_match[/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/]', 'is_unique[users.email]'));
-		$this->form_validation->set_rules('mobile', 'Mobile no', array('required', 'regex_match[/^[6-9]\d{9}$/]', 'is_unique[users.Mobile_No]'));
+		$this->form_validation->set_rules('email', 'Email', array('required', 'regex_match[/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/]'));
+		$this->form_validation->set_rules('mobile', 'Mobile no', array('required', 'regex_match[/^[6-9]\d{9}$/]'));
 		$this->form_validation->set_rules('dob', 'Date of Birth', array('required'));
 		$this->form_validation->set_rules('pincode', 'Pincode', array('required', 'exact_length[6]'));
 
